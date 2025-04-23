@@ -86,15 +86,14 @@ class _MainScreenState extends State<MainScreen> {
                     backgroundColor: Colors.deepOrangeAccent,
                     padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 30.0),
                   ),
-                  ),
                   child: Text('Logout', style: TextStyle(fontSize: 16)),
+                ),
                 ),
               ),
             ),
-            ),
             SizedBox(height: 20),
             // Weather Widget
-            Padding(
+            Padding(              
               padding: EdgeInsets.all(8.0),
               child: WeatherWidget(),
             ),

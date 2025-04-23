@@ -51,6 +51,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [                    
+                     if (_authMode == AuthMode.register) AuthInputField(
+                      controller: usernameController,
+                      label: 'Username',
+                      validator: (value) {
+                        return value == null || value.isEmpty ? 'Please enter a username' : null;
+                      },
+                      ),
+                    if (_authMode == AuthMode.register) SizedBox(height: 10),
                     AuthInputField(
                       controller: emailController,
                       label: 'Email',
