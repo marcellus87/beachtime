@@ -87,8 +87,7 @@ class _MainScreenState extends State<MainScreen> {
                     padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 30.0),
                   ),
                   child: Text('Logout', style: TextStyle(fontSize: 16)),
-                ),
-                ),
+                )
               ),
             ),
             SizedBox(height: 20),
