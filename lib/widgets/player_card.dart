@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
+import '../models/player.dart';
 
 class PlayerCard extends StatelessWidget {
-  final Map<String, String> player;
+  final Player player;
 
   PlayerCard({required this.player});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(
-        backgroundImage: AssetImage('assets/images/default_player.png'),
+       leading: CircleAvatar(
+        backgroundImage: player.imageUrl != null
+            ? AssetImage(player.imageUrl!)
+            : AssetImage('assets/images/default_player.png'),
       ),
-      title: Text(player['name'] ?? 'Unknown'),
-      subtitle: Text(player['skillLevel'] ?? 'Skill Level'),
+      title: Text(player.name),
+      subtitle: Text(player.skillLevel),
     );
   }
 }

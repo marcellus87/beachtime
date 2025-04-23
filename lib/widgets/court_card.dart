@@ -15,9 +15,9 @@ class CourtCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(court['courtName']!, style: TextStyle(fontWeight: FontWeight.bold)),
-            Text('${court['time']}'),
-            Text(court['location']!),
+            Text(court['courtName'] ?? 'Unknown Court', style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(court['time'] ?? 'Unknown Time'),
+            Text(court['location'] ?? 'Unknown Location', style: TextStyle(fontSize: 12)),
           ],
         ),
       ),
