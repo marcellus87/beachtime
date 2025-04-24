@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(), // Starts with the Login Screen
+      home: MainScreen(), // Starts with the Main Screen
       routes: {
         '/profile': (context) => PlayerProfileScreen(), // Player Profile route
         '/main': (context) => MainScreen(),             // Main Screen route
